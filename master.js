@@ -21,8 +21,22 @@ var easy = [
 
 	var index = 0;
 	var answer;
-	$(document).ready(function(){
 
+$(document).ready(function(){
+
+	var inhead = $('.inner-head');
+	var con = $('.content');
+	$('.inner-content').css("opacity", "0");
+	inhead.css("opacity", "0");
+	con.css("height", "150px")
+
+	$('.btn-lg').on("click", function(){
+		$('.btn-lg').hide();
+		con.animate({height: "250px"})
+		inhead.animate({opacity: "1"});
+		inhead.text("Choose difficulty:")
+		$('.inner-content').animate({opacity: "1"});
+	});
 
 		var ch = $("#ch");
 		function getQuestion(){
@@ -51,4 +65,4 @@ var easy = [
 			}
 		}
 
-	});
+});
