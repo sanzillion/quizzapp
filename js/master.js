@@ -22,6 +22,27 @@ var easy = [
 	var index = 0;
 	var answer;
 
+	var num;
+	var arr = [];	
+
+	for(var x = 0; x <= 25; x++){
+		num = parseInt(Math.random() * 26);
+		checkarr(arr, num)
+
+	}
+
+function checkarr(array, num){
+	var arr = array;
+	for(var x = 0; x = arr.length; x++){
+		if(num == arr[x]){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+}
+
 $(document).ready(function(){
 
 	var inhead = $('.inner-head');
@@ -32,7 +53,7 @@ $(document).ready(function(){
 
 	$('.btn-lg').on("click", function(){
 		$('.btn-lg').hide();
-		con.animate({height: "250px"})
+		con.animate({height: "370px"})
 		inhead.animate({opacity: "1"});
 		inhead.text("Choose difficulty:")
 		$('.inner-content').animate({opacity: "1"});

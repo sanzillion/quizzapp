@@ -7,7 +7,7 @@ div{
 	display: block;
 	margin: 0 auto;
 	width: 300px;
-	height: 20	0px;
+	height: 200px;
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -21,6 +21,15 @@ div{
 
 .head h1{
 	font-size: 5vw;
+}
+
+.foot{
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+	padding: 30px 0px;
 }
 
 .content{
@@ -41,7 +50,7 @@ div{
 	padding-top: 20px;
 	text-align: center;
 	background-color: #34495e;
-	height: 150px;
+	height: 270px;
 	color: #ecf0f1;
 	font-size: 20px;
 }
