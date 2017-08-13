@@ -1,5 +1,25 @@
 // Vanilla
 
+	var tempanswer;
+	var easy = [
+	{
+		question: "Who are you?",
+		choices: ["you", "me"
+		, "who"],
+		answer: "you"
+	},
+	{
+		question: "Where you live?",
+		choices: ["here", "there", "everywhere"],
+		answer: "here"
+	},
+	{
+		question: "What you do?",
+		choices: ["this", "that", "fuck"],
+		answer: "fuck"
+	}
+	];
+
 var index = 0;
 var answer;
 
