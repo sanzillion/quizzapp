@@ -4,40 +4,48 @@ var index = 0;
 var answer;
 
 var num;
-var arr = [];	
 
-	//Random array of numbers from 0 - 24
+//Random array of numbers from 0 - 24
+function randomQuestions(){
+	var arrQue = [];
 	for(var x = 0; x < 25; x++){
-		num = parseInt(Math.random() * 25);
-		if(arr.length != 0){
+		num = Math.floor(Math.random() * 25);
+		if(arrQue.length != 0){
 			//console.log("testing "+num);
-			if(!checkarr(arr, num)){
-				arr[x] = num;
+			if(arrQue.indexOf(num) == -1){
+				arrQue[x] = num;
 			}
 			else{
 				x -= 1;
 			}
 		}
 		else{
-			arr[x] = num;
+			arrQue[x] = num;
 		}
-	}
+	}	
+	return arrQue;
+}
 
-// checking function for the algorithm
-function checkarr(array, num){
-	var arrz = array;
-	var test = 0;
-	for(var x = 0; x < arrz.length; x++){
-		if(num == arrz[x]){
-			test = 1;
+
+//Random array of numbers from 0-2
+function randomChoices(){
+	var arrChoice = [];
+	for(var x = 0; x < 3; x++){
+		num = Math.floor(Math.random() * 3	);
+		if(arrChoice.length != 0){
+			//console.log("testing "+num);
+			if(arrChoice.indexOf(num) == -1){
+				arrChoice[x] = num;
+			}
+			else{
+				x -= 1;
+			}
 		}
+		else{
+			arrChoice[x] = num;
+		}	
 	}
-
-	if(test == 1){
-		return true;
-	}else{
-		return false;
-	}
+	return arrChoice;	
 }
 
 // function sortNum(arr){
@@ -48,6 +56,15 @@ function checkarr(array, num){
 // 	numArray.sort(sortNumber);
 // 	console.log(numArray.join(","));
 // }
+test();
+function test(){
+	console.log("Im in!");
+	for (var i = 1; i <= 10; i++) {
+		i -= 1;
+		console.log(i);
+	}
+}
+
 
 // Jquery
 $(document).ready(function(){
@@ -55,6 +72,8 @@ $(document).ready(function(){
 	var inhead = $('.inner-head');
 	var con = $('.content');
 	var incon = $('.inner-content');
+	var ch = $("#ch");
+	
 	incon.css("opacity", "0");
 	incon.hide();
 	inhead.css("opacity", "0");
@@ -69,14 +88,13 @@ $(document).ready(function(){
 		incon.animate({opacity: "1"});
 	});
 
-		var ch = $("#ch");
-		function getQuestion(){
-			$("#q").text(question.easy[index].question);
-			ch.html("<option>"+question.easy[index].choices[0]+"</option>"+
-				"<option>"+question.easy[index].choices[1]+"</option>"+
-				"<option>"+question.easy[index].choices[2]+"</option>")				
-			index++;
-		}	
+	function getQuestion(){
+		$("#q").text(question.easy[index].question);
+		ch.html("<option>"+question.easy[index].choices[0]+"</option>"+
+			"<option>"+question.easy[index].choices[1]+"</option>"+
+			"<option>"+question.easy[index].choices[2]+"</option>")				
+		index++;
+	}	
 
 	getQuestion();
 	$("#sub").on("click", function(){
