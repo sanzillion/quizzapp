@@ -1,4 +1,9 @@
 
+.fonts{
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Paytone One', sans-serif;
+}
+
 div{
 	display: block;
 }
@@ -20,7 +25,22 @@ div{
 }
 
 .head h1{
-	font-size: 5vw;
+	font-family: 'Paytone One', sans-serif;
+	font-size: 50px;
+}
+
+p{
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+h2{
+	margin-bottom: 20px;
+	font-family: 'Paytone One', sans-serif;
+}
+
+.inner-content h3{
+	margin-top: 10px !important;
+	font-family: 'Paytone One', sans-serif;
 }
 
 .foot{
@@ -59,6 +79,11 @@ div{
 	border-radius: 0px !important;
 }
 
+.mybtn{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
 
 /*.inner-content{
 	display: flex;
