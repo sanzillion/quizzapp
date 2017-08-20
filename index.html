@@ -5,15 +5,22 @@
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script>alert("Copy pa more!");	for (var i = 1; i == -1; i++) { i -= 1;	console.log(i);}</script>
+	<script>
+	// alert("Copy pa more!");	for (var i = 1; i == -1; i++) { i -= 1;	console.log(i);}
+	</script>
 	<!-- Javascript -->
 	<!-- 	<script
   	src="https://code.jquery.com/jquery-3.2.1.min.js"
   	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   	crossorigin="anonymous"></script> -->
-  	<script src="js/bootstrap.js"></script>
+  	<script src="js/jquery.js"></script>
+  <script
+  src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
+  integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+  crossorigin="anonymous"></script>
+  	<script src="js/player.js"></script>
 	<script src="js/json.js"></script>
-	<script src="js/jquery.js"></script>
+	
 	<script src="js/master.js"></script>
 
 	<!-- Style sheets -->
@@ -21,6 +28,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Paytone+One" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/master.css">
+	<link rel="stylesheet" href="css/loading.css">
 	<title>Web App - Sanz</title>
 
 </head>
@@ -44,40 +52,47 @@
 					<div class="header">
 
 						<h2 class="inner-head"></h2>
-						<button class="btn btn-info btn-lg">
+						<button class="btn infoBlue btn-lg">
 							<h2>Start Game</h2>
 						</button>
 						
 					</div>
 					<div class="container-fluid inner-content">
 
-						<div class="col-md-4">
-							<button class="btn btn-block btn-info">
-								<h3>Easy</h3>
+						<div class="col-md-4 buts" id="a">
+							<button id="easy" class="mybtn btn-info">
+								<h3>Soft</h3>
 							</button>
 						</div>
-						<div class="col-md-4">
-							<button class="btn btn-block btn-warning">
+						<div class="col-md-4 buts" id="b">
+							<button id="hard" class="mybtn btn-warning">
 								<h3>Hard</h3>
 							</button>
 							
 						</div>
-						<div class="col-md-4">
-							<button class="btn btn-block btn-danger">
-								<h3>Genius</h3>
+						<div class="col-md-4 buts" id="c">
+							<button id="harder" class="mybtn btn-danger">
+								<h3>Harder</h3>
 							</button>
 						</div>
 
-						<div class="col-md-12">
+						<div class="col-md-12 buts">
 							<div class="instructions">
 								<p><b>Instructions</b></p>
 								<ul>
 									<li><p>Choose difficulty fucker!</p></li>
 									<li><p>Then choose only 1 answer</p></li>
 									<li><p>At the end you'll know if you are an idiot or not</p></li>
-									<li><p>Goodluck dickheads!</p></li>
+									<li><p>Goodluck Mate!</p></li>
 								</ul>
 							</div>
+						</div>
+
+						<div class="loading">
+							<div class="circle"></div>
+					        <div class="circle-small"></div>
+					        <div class="circle-big"></div>
+					        <div class="circle-inner"><h1>3</h1></div>
 						</div>
 
 					</div>

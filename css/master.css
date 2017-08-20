@@ -37,7 +37,7 @@ ul li{
 	font-family: 'Juluis Sans One', sans-serif;
 }
 
-h2{
+h1, h2{
 	margin-bottom: 20px;
 	font-family: 'Paytone One', sans-serif;
 }
@@ -61,10 +61,11 @@ h2{
 	display: block;
 	background-color: #3498db;
 	height: 500px;
+	overflow: auto;
 }
 
 .header{
-	padding: 10px 0;
+	padding: 10px 20px;
 	text-align: center;
 	color: #ecf0f1;
 	font-size: 48px;
@@ -79,15 +80,19 @@ h2{
 	overflow: auto;
 }
 
+.mybtn{
+	border-radius: 0px;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	padding: 10px 10px;
+	border: 1px solid transparent;
+}
+
 .btn{
 	border-radius: 0px !important;
 }
 
-.mybtn{
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-}
 
 .instructions{
 	display: block;
@@ -95,12 +100,52 @@ h2{
 	width: 100%;
 	background-color: #28BC51;
 	text-align: left;
-	padding: 20px 20px;
+	padding: 20px 40px;
 	opacity: 0.9;
 }
 
 .instructions p{
 	margin-bottom: 0px;
+}
+
+.orangeShade{
+	background-color: #C68725;
+	color: white;
+}
+
+.orangeShade:hover{
+	background-color: white;
+	color: #C68725;
+}
+
+.blueShade{
+	background-color: #2D93AE;
+	color: white;
+}
+
+.blueShade:hover{
+	background-color: white;
+	color: #2D93AE;
+}
+
+.redShade{
+	background-color: #C22E2E;
+	color: white;
+}
+
+.redShade:hover{
+	background-color: white;
+	color: #C22E2E;
+}
+
+.infoBlue{
+	background-color: #5bc0de;
+	color: white;
+}
+
+.infoBlue:hover{
+	background-color: white;
+	color: #5bc0de;
 }
 
 /*.inner-content{
