@@ -37,7 +37,10 @@ var cd = 2; //start number for countdown
 //for execution
 var diff; //difficulty
 var mix = randomQuestions(); //mixing of questions
-
+var button = {
+	id: false,
+	val: false
+	};
 var msg;
 //Random array of numbers from 0 - 24
 function randomQuestions(){

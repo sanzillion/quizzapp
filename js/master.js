@@ -1,5 +1,10 @@
 // Jquery
 $(document).ready(function(){
+
+	setTimeout(function(){
+		alert('Hi there! Welcome to Quizzapp! This is a one-page web application using Javascript with Jquery library as a partial completion of the subject IT40 (Web Application) on BS in Information Technology on St. John Paul II College of Davao');
+	}, 3000);
+
 	//find this bullshits in the DOM
 	var inhead = $('.inner-head');
 	var con = $('.content');
@@ -64,15 +69,15 @@ $(document).ready(function(){
 			p3 = (s3 / 15) * 100;
 
 			$('#a').html("<button id='"+d1+"' class='mybtn btn-info'><h3>Easy: "+s1+"/15</h3></button>");
-			$('#b').html("<button id='"+d2+"' class='mybtn btn-warning'><h3>Hard: "+s2+"/15</h3></button>");
-			$('#c').html("<button id='"+d3+"' class='mybtn btn-danger'><h3>Harder: "+s3+"/15</h3></button>");
+			$('#b').html("<button id='"+d2+"' class='mybtn btn-warning'><h3>Moderate: "+s2+"/15</h3></button>");
+			$('#c').html("<button id='"+d3+"' class='mybtn btn-danger'><h3>Hard: "+s3+"/15</h3></button>");
 			inhead.text(player.name+"'s Overall Score : "+parseInt(per)+"%");
 
 			if (total < 10){
 				msg = "You are not IT are you?";
 			}
 			else if (total >= 10 && total <= 20){
-				msg = "Try again Noob!";
+				msg = "Try again!";
 			}
 			else if (total > 20 && total <= 30){
 				msg = "Well not bad!";
@@ -81,13 +86,13 @@ $(document).ready(function(){
 				msg = "Im beginning to think you are cheating!";
 			}
 			else{
-				msg = "CHEATER!";
+				msg = "YOU CHEATER!";
 			}
 		}
 		else{
-			$('#a').html("<button id='"+d1+"' class='mybtn btn-info'><h3>Soft</h3></button>");
-			$('#b').html("<button id='"+d2+"' class='mybtn btn-warning'><h3>Hard</h3></button>");
-			$('#c').html("<button id='"+d3+"' class='mybtn btn-danger'><h3>Harder</h3></button>");
+			$('#a').html("<button id='"+d1+"' class='mybtn btn-info'><h3>Easy</h3></button>");
+			$('#b').html("<button id='"+d2+"' class='mybtn btn-warning'><h3>Moderate</h3></button>");
+			$('#c').html("<button id='"+d3+"' class='mybtn btn-danger'><h3>Hard</h3></button>");
 			inhead.text("Choose difficulty:")
 		}
 
@@ -102,6 +107,7 @@ $(document).ready(function(){
 		if(player.finish == true){
 			setTimeout(function(){
 				alert(player.name+"? "+msg);
+				alert('If you want to play again just refresh the page!');
 			}, 2000);
 		}
 	}
@@ -153,6 +159,10 @@ $(document).ready(function(){
 //-------------------------------------------------------------------------
 
 	buts.on("click", function(){
+		//for score purpose
+		button.id = false;
+		button.val = false;
+
 		var btnId = $(this).children().attr('id');
 		console.log("Id = "+btnId);
 		if(btnId != '' && btnId != undefined){
@@ -172,6 +182,7 @@ $(document).ready(function(){
 		}
 		else{
 			console.log("No id! Nothing happens!");
+			button.id = true;
 		}
 
 	});	
@@ -208,7 +219,6 @@ $(document).ready(function(){
 	function stopload(){
 		clearInterval(timer);
 		cd = 3;
-		$('.circle-inner h1').text("asf")
 	}
 
 	function loading(){
@@ -304,6 +314,11 @@ $(document).ready(function(){
 		}
 		else{
 			console.log("No value, nothing happens!");
+			button.val = true;
+
+			if(button.val == true && button.id == true){
+				alert("Pick another difficulty!");
+			}
 		}
 	});
 
